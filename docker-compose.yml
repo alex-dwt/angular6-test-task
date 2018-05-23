@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+
+  angular-app:
+
+#    command: bash -c 'sleep 10000'
+    build:
+      context: .
+    volumes:
+      - './app:/usr/src/my-app'
+    ports:
+      - '4200:4200'
