@@ -153,4 +153,9 @@ export class AppComponent {
       fullImageUrl: 'https://s3.eu-central-1.amazonaws.com/bonusbay-images/campaign_banner/ed543b7d7ee667bc107f730d95374047.png'
     },
   ];
+
+  onLoadMoreBtnClick()
+  {
+    console.log('load more');
+  }
 }

@@ -1,6 +1,6 @@
 body > div {
   max-width: 1160px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto;
 }
 
 #store-cards-list {
@@ -11,4 +11,22 @@ body > div {
 
 #store-cards-list > div {
   margin: 0 25px 25px 0;
+}
+
+#load-more-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#load-more-div p {
+  text-align: center;
+}
+
+#load-more-div div {
+  border: 1px solid darkgray;
+  background-color: lightgrey;
+  padding: 10px 15px;
+  user-select: none;
+  cursor: pointer;
 }
