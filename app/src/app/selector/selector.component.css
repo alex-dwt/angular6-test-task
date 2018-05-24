@@ -24,6 +24,8 @@ ul {
   background-color: #FFF;
   z-index: 10;
   width: 100%;
+
+  left: -1px;
 }
 
 ul.hidden {

@@ -7,8 +7,16 @@
   </head>
 
   <body>
-    <app-store-card [card]="storeCard"></app-store-card>
-    <app-filter-group></app-filter-group>
+    <div>
+      <app-filter-group></app-filter-group>
+
+      <div id="store-cards-list">
+        <div *ngFor="let storeCard of storeCards">
+          <app-store-card [card]="storeCard"></app-store-card>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
 
