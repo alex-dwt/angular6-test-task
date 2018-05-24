@@ -16,7 +16,12 @@ export class AppComponent {
   }
 
   onLoadMoreBtnClick() {
-    this.storeCards = this.storeCards.concat(this.storeCardsService.getCards('a',1,1));
+    this
+      .storeCardsService
+      .getCards('name', 5, 0)
+      .then(
+        items => this.storeCards = this.storeCards.concat(items)
+      );
   }
 
   onRemoveCardClick(cardId: string) {
