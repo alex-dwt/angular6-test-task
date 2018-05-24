@@ -1,0 +1,15 @@
+<div class="main">
+  <p (click)="onLabelClick()">{{ selectedText }}</p>
+
+  <ul [class.hidden]="isHidden">
+
+    <li
+      *ngFor="let option of options"
+      (click)="onSelectValueClick(option)"
+    >
+      {{ option.text }}
+    </li>
+
+  </ul>
+</div>
+

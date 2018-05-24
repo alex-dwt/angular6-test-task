@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="label" (click)="onLabelClick()">
+    <p>Filter</p>
+  </div>
+
+  <div class="popup" [class.hidden]="isHidden">
+
+    <div class="filter">
+      <p>ORDER BY</p>
+      <app-selector [options]="orderByOptions" (onSelection)="onOrderBySelection($event)"></app-selector>
+    </div>
+
+    <div class="filter">
+      <p>PER PAGE</p>
+      <app-selector [options]="perPageOptions" (onSelection)="onPerPageSelection($event)"></app-selector>
+    </div>
+
+    <p class="apply-btn">
+      <span (click)="onApplyClick()">
+        Apply
+      </span>
+    </p>
+
+  </div>
+</div>

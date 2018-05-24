@@ -1,0 +1,41 @@
+.main {
+  position: relative;
+
+  width: 150px;
+  border: 1px solid grey;
+  border-radius: 2px;
+
+  font-size: 18px;
+}
+
+.main p {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  border: 1px solid grey;
+  border-radius: 2px;
+
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+
+  background-color: #FFF;
+  z-index: 10;
+  width: 100%;
+}
+
+ul.hidden {
+  display: none;
+}
+
+ul li {
+  border-bottom: 1px solid grey;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  border-color: #FFF;
+}

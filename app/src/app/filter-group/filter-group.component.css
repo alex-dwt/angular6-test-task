@@ -1,0 +1,57 @@
+.main {
+  position: relative;
+  width: 150px;
+  border: 2px solid grey;
+  border-radius: 3px;
+}
+
+.main * {
+  user-select: none;
+}
+
+
+.label {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.label p {
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+.popup {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+
+  width: 350px;
+  border: 2px solid grey;
+  border-radius: 3px;
+  background-color: #FFF;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.apply-btn {
+  font-size: 20px;
+  text-align: right;
+  color: cornflowerblue;
+  margin: 30px 15px 15px;
+}
+
+.apply-btn span {
+  cursor: pointer;
+}
+
+.filter {
+  border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
