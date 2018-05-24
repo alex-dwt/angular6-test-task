@@ -6,6 +6,7 @@ import { StoreCardComponent } from './store-card/store-card.component';
 import { CardCommissionPipe } from './store-card/card-commission.pipe';
 import { FilterGroupComponent } from './filter-group/filter-group.component';
 import { SelectorComponent } from './selector/selector.component';
+import { RemovableStoreCardComponent } from './removable-store-card/removable-store-card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SelectorComponent } from './selector/selector.component';
     StoreCardComponent,
     CardCommissionPipe,
     FilterGroupComponent,
-    SelectorComponent
+    SelectorComponent,
+    RemovableStoreCardComponent
   ],
   imports: [
     BrowserModule

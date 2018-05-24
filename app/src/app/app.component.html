@@ -12,7 +12,7 @@
 
       <div *ngIf="storeCards.length" id="store-cards-list">
         <div *ngFor="let storeCard of storeCards">
-          <app-store-card [card]="storeCard"></app-store-card>
+          <app-removable-store-card [card]="storeCard" (onRemoveCard)="onRemoveCardClick($event)"></app-removable-store-card>
         </div>
       </div>
 

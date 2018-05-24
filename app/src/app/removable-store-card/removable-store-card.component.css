@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+  user-select: none;
+}
+
+p {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p:hover {
+  transform: scale(1.5);
+}
