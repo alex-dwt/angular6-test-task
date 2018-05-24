@@ -9,12 +9,12 @@ export class StoreCardsService {
   constructor(private http: HttpClient) {
   }
 
-  getCards(order: string, limit: number, offset: number): Promise {
+  getCards(order: string, perPage: number, offset: number): Promise {
     return new Promise(resolve =>
       this
         .http
         .get(
-          `${this.url}?limit=${limit}&offset=${offset}&order=${order}`,
+          `${this.url}?limit=${perPage}&offset=${offset}&order=${order}`,
           {headers: {'Accept-Language':'fi'}})
         .subscribe(
           data => resolve(

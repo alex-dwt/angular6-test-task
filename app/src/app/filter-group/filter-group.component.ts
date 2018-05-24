@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FilterGroupValue} from "./selectorResult.interface";
 
 @Component({
   selector: 'app-filter-group',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-group.component.css']
 })
 export class FilterGroupComponent implements OnInit {
+  @Output() filterClick = new EventEmitter<FilterGroupValue>();
 
   isHidden: boolean = true;
 
@@ -56,8 +58,10 @@ export class FilterGroupComponent implements OnInit {
   }
 
   onApplyClick(): void {
-    console.log(this.orderByValue)
-    console.log(this.perPageValue)
+    this.filterClick.emit({
+      orderBy: this.orderByValue,
+      perPage: parseInt(this.perPageValue),
+    });
 
     this.isHidden = true;
   }

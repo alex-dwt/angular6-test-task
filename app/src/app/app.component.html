@@ -8,7 +8,7 @@
 
   <body>
     <div>
-      <app-filter-group></app-filter-group>
+      <app-filter-group (filterClick)="onApplyFilterClick($event)"></app-filter-group>
 
       <div *ngIf="storeCards.length" id="store-cards-list">
         <div *ngFor="let storeCard of storeCards">
@@ -21,7 +21,7 @@
       </p>
 
       <div id="load-more-div">
-        <div (click)="onLoadMoreBtnClick()">
+        <div (click)="onLoadMoreBtnClick()" [style.display]="isLoadMoreBtnHidden ? 'none' : 'block'">
           <p>load more</p>
         </div>
       </div>
