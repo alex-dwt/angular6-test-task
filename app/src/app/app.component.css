@@ -30,3 +30,9 @@ body > div {
   user-select: none;
   cursor: pointer;
 }
+
+#store-cards-empty-warning {
+  text-align: center;
+  font-size: 24px;
+  margin: 50px;
+}

@@ -10,11 +10,15 @@
     <div>
       <app-filter-group></app-filter-group>
 
-      <div id="store-cards-list">
+      <div *ngIf="storeCards.length" id="store-cards-list">
         <div *ngFor="let storeCard of storeCards">
           <app-store-card [card]="storeCard"></app-store-card>
         </div>
       </div>
+
+      <p *ngIf="!storeCards.length" id="store-cards-empty-warning">
+        There is no cards!
+      </p>
 
       <div id="load-more-div">
         <div (click)="onLoadMoreBtnClick()">
