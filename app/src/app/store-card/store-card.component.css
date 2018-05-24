@@ -1,0 +1,32 @@
+.title {
+  font-size: 18px;
+  padding: 3% 0;
+}
+
+.commission {
+  color: red;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main {
+  border: 2px solid grey;
+  border-radius: 5px;
+
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main div {
+  max-width: 70%;
+  height: 60%;
+}
+
+img {
+  max-width: 100%;
+}
