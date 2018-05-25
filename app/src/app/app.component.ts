@@ -23,6 +23,7 @@ export class AppComponent {
     this.currentOffset = 0;
     this.currentFilterGroupValue = filterGroupValue;
     this.storeCards = [];
+    this.isLoadMoreBtnHidden = true;
 
     this.loadCards();
   }
@@ -48,11 +49,11 @@ export class AppComponent {
         this.currentOffset
       )
       .then(
-        items => {
-          this.storeCards = this.storeCards.concat(items);
+        result => {
+          this.storeCards = this.storeCards.concat(result.items);
           this.currentOffset += this.currentFilterGroupValue.perPage;
 
-          this.isLoadMoreBtnHidden = !items.length;
+          this.isLoadMoreBtnHidden = this.currentOffset >= result.count;
         }
       );
   }

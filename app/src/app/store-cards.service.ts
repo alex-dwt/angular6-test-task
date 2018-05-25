@@ -9,7 +9,7 @@ export class StoreCardsService {
   constructor(private http: HttpClient) {
   }
 
-  getCards(order: string, perPage: number, offset: number): Promise {
+  getCards(order: string, perPage: number, offset: number) {
     return new Promise(resolve =>
       this
         .http
@@ -17,14 +17,15 @@ export class StoreCardsService {
           `${this.url}?limit=${perPage}&offset=${offset}&order=${order}`,
           {headers: {'Accept-Language':'fi'}})
         .subscribe(
-          data => resolve(
-            data.items.map(o => ({
+          data => resolve({
+            count: data.total,
+            items: data.items.map(o => ({
               id: o.id,
               title: o.title,
               commission: o.commission,
               fullImageUrl: o.full_image.url,
             }))
-          )
+          })
         )
     );
   }
