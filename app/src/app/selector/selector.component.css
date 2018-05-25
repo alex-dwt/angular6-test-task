@@ -1,7 +1,7 @@
 .main {
   position: relative;
 
-  width: 150px;
+  width: 180px;
   border: 1px solid grey;
   border-radius: 2px;
 
@@ -40,4 +40,18 @@ ul li {
 
 ul li:hover {
   border-color: #FFF;
+}
+
+
+p::before, p::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  border: 10px solid transparent;
+  border-top: 10px solid #000;
+}
+p::after {
+  border-top: 10px solid white;
+  top: 8px;
 }

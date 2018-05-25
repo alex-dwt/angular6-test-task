@@ -58,3 +58,16 @@
   justify-content: space-between;
   padding: 15px;
 }
+
+.popup::before, .popup::after {
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: -18px;
+  border: 10px solid transparent;
+  border-bottom: 8px solid grey;
+}
+.popup::after {
+  border-bottom: 8px solid white;
+  top: -16px;
+}
